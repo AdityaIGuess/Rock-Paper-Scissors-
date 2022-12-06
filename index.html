@@ -62,14 +62,77 @@
 
             
             }
+            
+             const playerSelection = "rock"
+             const computerSelection = getComputerChoice()
+             let player_score = 0;
+             let computer_score = 0;
+            
+            
+            function game(player_score, computer_score) {
+                playRound(playerSelection, computerSelection);
+                
 
-            const playerSelection = "rock"
-            const computerSelection = getComputerChoice()
-            
+                if (playerSelection === "rock" && computerSelection === "paper") {
+                    return computer_score = computer_score + 1;
+                    return computer_score.toString();
+                    return player_score.toString();
+                }
+
+                else if (playerSelection === "rock" && computerSelection === "rock") {
+                   // return "No score added!" && "Computer score is:" + " " + computer_score.toString() && "Player score is:" + " " + player_score.toString(); 
+                }
+
+                else if (playerSelection === "rock" && computerSelection === "scissors") {
+                  //  return "Computer score is:" + " " + computer_score.toString() && "Player score is:" + " " + (player_score + 1).toString();
+                }
+                 
+                else if (playerSelection === "paper" && computerSelection === "scissors") {
+                 //   return computer_score = computer_score + 1 && "Computer score is:" + " " + computer_score.toSring() && "PLayer score is:" + " " + player_score.toString();
+                }
+
+                else if (playerSelection === "paper" && computerSelection === "rock") {
+                    return player_score = player_score + 1;
+                    return "Computer score is:" + " " + computer_score.toString();
+                    return "Player score is:" + " " + player_score.toString();
+                }
+
+                else if (playerSelection === "paper" && computerSelection === "paper") {
+                    return "No score added!";
+                    return "Computer score is:" + " " + computer_score.toString();
+                    return "Player score is:" + " " + player_score.toString();
+                }
+
+                else if (playerSelection === "scissors" && computerSelection === "paper") {
+                    return player_score = player_score + 1;
+                    return "Computer score is:" + " " + computer_score.toString();
+                    return "Player score is:" + " " + player_score.toString();
+                }
+
+                else if (playerSelection === "scissors" && computerSelection === "rock") {
+                    return computer_score = computer_score + 1;
+                    return "Computer score is:" + " " + computer_score.toString();
+                    return "Player score is:" + " " + player_score.toString();
+                }
+
+                else if (playerSelection === "scissors" && computerSelection === "scissors") {
+                    return "No score added!";
+                    return "Computer score is:" + " " + computer_score.toString();
+                    return "Player score is:" + " " + player_score.toString();
+                }
+
+            }
+
+            for (let i = 0; i < 5; i++) {
+                game()
+             }
 
             
             
-            console.log(game())
+             
+
+             console.log(playRound(playerSelection, computerSelection))
+             console.log(game(player_score, computer_score))
             
         </script>
     </body>
