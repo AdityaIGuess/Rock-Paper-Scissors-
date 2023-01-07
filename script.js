@@ -72,6 +72,7 @@
  
  function UserInput() {
     playerSelection = "rock";
+    computerSelection = getComputerChoice();
     if (playerSelection.toLowerCase() == 'rock') {
         console.log(playRound(playerSelection, computerSelection));
     }
@@ -90,9 +91,9 @@
     for (let i = 0; i < 5 ; i++) {
         console.log(UserInput())
     }
-    console.log(declarWinner())
+    console.log(declareWinner());
  }
  
-
+ console.log(game())
  
  
